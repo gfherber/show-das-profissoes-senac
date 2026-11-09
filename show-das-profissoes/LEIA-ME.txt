@@ -1,0 +1,19 @@
+SHOW DAS PROFISSÕES - Senac Taquara
+
+COMO USAR NA LOUSA
+1. Copie a pasta inteira (show-das-profissoes) para a lousa.
+2. Abra o arquivo index.html no Chrome.
+3. Toque na tela inicial: o jogo entra em tela cheia.
+
+ONDE EDITAR
+- js/perguntas.js  -> perguntas, dados dos cursos (datas, horários), tempo do cronômetro, acertos para liberar a roleta
+- css/style.css    -> cores e visual
+- js/jogo.js       -> lógica do quiz e da roleta
+- img/logo-senac.png -> logo
+
+PAINEL DO OPERADOR
+Na tela inicial, segure a logo por 3 segundos.
+Ali você marca brindes como esgotados e vê quantos de cada já saíram.
+
+IMPORTANTE
+Mantenha as pastas css, js e img junto do index.html.

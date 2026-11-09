@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Show das Profissões | Senac Taquara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <!-- ATRAÇÃO -->
+  <section class="screen" id="attract">
+    <div class="marca"><div class="logo" id="brand"></div><span class="chip">Ação Macromix</span></div>
+    <div>
+      <h1 class="titulo"><span class="t1">Show das</span><span class="t2">Profissões</span></h1>
+      <div class="orb"><span id="teaser">O que faz um Técnico em Desenvolvimento de Sistemas?</span></div>
+    </div>
+    <div>
+      <div class="tap">TOQUE PARA JOGAR</div>
+      <p class="hint">Acerte 5 perguntas e gire a roleta de brindes!</p>
+    </div>
+  </section>
+
+  <!-- PERGUNTA -->
+  <section class="screen" id="game" hidden>
+    <div class="marca"><div class="logo" data-logo></div><div class="premio" id="premio"></div></div>
+    <div class="status"><div class="escada" id="escada"></div><div class="timer" id="timer"><div id="timerbar"></div></div></div>
+    <div class="pergunta"><p id="qtext"></p></div>
+    <div class="opcoes" id="opts"></div>
+    <div class="ajudas">
+      <button class="ajuda" id="h-elim"><span>✂️</span>Eliminar 2</button>
+      <button class="ajuda" id="h-skip"><span>⏭️</span>Pular</button>
+    </div>
+  </section>
+
+  <!-- RESPOSTA -->
+  <section class="screen" id="answer" hidden>
+    <div class="selo">
+      <div class="icone" id="aicon">✓</div>
+      <h2 id="atitle">Resposta certa!</h2>
+      <p id="atext"></p>
+    </div>
+    <div class="curso">
+      <div class="topo"><span>Senac Taquara</span><span id="cmod"></span></div>
+      <div class="corpo">
+        <h3 id="cnome"></h3>
+        <p class="desc" id="cdesc"></p>
+        <div class="dados" id="cdados"></div>
+      </div>
+    </div>
+    <div class="progresso" id="aprog"></div>
+    <button class="cta" id="next">Próxima pergunta</button>
+  </section>
+
+  <!-- RESULTADO -->
+  <section class="screen" id="result" hidden>
+    <div class="trofeu">🏆</div>
+    <h2>Você acertou as 5!</h2>
+    <p>Parabéns! A roleta de brindes está liberada. Toque abaixo e descubra o que você ganhou.</p>
+    <button class="cta" id="towheel" style="padding-inline:2.4rem">Girar a roleta 🎡</button>
+  </section>
+
+  <!-- ROLETA -->
+  <section class="screen" id="wheel" hidden>
+    <h2>Roleta de <em>Brindes</em></h2>
+    <p class="sub">Toque em girar e boa sorte!</p>
+    <div class="roda"><div class="ponteiro"></div><canvas id="wc"></canvas></div>
+    <button class="cta" id="spin">GIRAR!</button>
+  </section>
+</div>
+
+<div class="reveal" id="reveal" hidden>
+  <div class="card">
+    <div class="faixa">Parabéns!</div>
+    <div class="conteudo">
+      <div class="lbl">Você ganhou o brinde nº</div>
+      <div class="num" id="rnum">3</div>
+      <p>Mostre esta tela para a equipe do <b>Senac Taquara</b> e retire seu brinde.</p>
+      <button class="cta" id="finish">Finalizar</button>
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="panel" hidden>
+  <div class="card">
+    <h3>Painel do operador</h3>
+    <small>Marque um brinde como esgotado quando ele acabar. A roleta só sorteia os disponíveis. As contagens ficam salvas neste aparelho.</small>
+    <div id="prows" style="display:flex;flex-direction:column;gap:.5rem"></div>
+    <div class="acts"><button id="preset">Zerar contagem</button><button id="pclose">Fechar</button></div>
+  </div>
+</div>
+<canvas id="confetti"></canvas>
+
+<script src="js/perguntas.js"></script>
+<script src="js/jogo.js"></script>
+</body>
+</html>
